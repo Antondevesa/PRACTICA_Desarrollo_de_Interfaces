@@ -82,7 +82,6 @@ public class UserDAO {
     }
 
     public boolean updateUserFavorite(int userId, int carId) {
-        // La consulta SQL para actualizar solo ese campo
         String query = "UPDATE users SET favorite_car_id = ? WHERE id = ?";
 
         try (Connection conn = com.example.practica_desarrollo_de_interfaces.util.DatabaseConnection.getConnection();
@@ -92,7 +91,7 @@ public class UserDAO {
             pstmt.setInt(2, userId);
 
             int rowsAffected = pstmt.executeUpdate();
-            return rowsAffected > 0; // Devuelve true si se actualizó correctamente
+            return rowsAffected > 0;
 
         } catch (Exception e) {
             System.err.println("Error al actualizar el favorito en la BD: " + e.getMessage());
