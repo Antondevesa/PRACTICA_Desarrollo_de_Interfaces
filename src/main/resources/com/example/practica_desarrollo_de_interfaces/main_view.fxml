@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane fx:id="mainRoot" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.practica_desarrollo_de_interfaces.controller.MainController">
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="20.0" style="-fx-background-color: #2c3e50; -fx-padding: 15px;">
+            <children>
+                <Button text="Catálogo de Coches" onAction="#showCars" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px; -fx-cursor: hand;" />
+
+                <Button fx:id="btnUsuarios" text="Gestión Usuarios" onAction="#showUsers" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px; -fx-cursor: hand;" />
+
+                <Region HBox.hgrow="ALWAYS" />
+
+                <Button text="Cerrar Sesión" onAction="#handleLogout" style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand;" />
+            </children>
+        </HBox>
+    </top>
+    <center>
+        <Label text="Cargando..." BorderPane.alignment="CENTER" />
+    </center>
+    <bottom>
+        <HBox alignment="CENTER" style="-fx-background-color: #1e272e; -fx-padding: 15px; -fx-border-color: #2ecc71; -fx-border-width: 2px 0 0 0;">
+            <Label text="FOOTER ESTÁNDAR" style="-fx-text-fill: #2ecc71; -fx-font-size: 14px; -fx-font-weight: bold; -fx-letter-spacing: 2px;" />
+        </HBox>
+    </bottom>
+</BorderPane>

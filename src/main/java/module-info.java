@@ -6,5 +6,6 @@ module com.example.practica_desarrollo_de_interfaces {
 
 
     opens com.example.practica_desarrollo_de_interfaces to javafx.fxml;
+    opens com.example.practica_desarrollo_de_interfaces.controller to javafx.fxml;
     exports com.example.practica_desarrollo_de_interfaces;
 }
