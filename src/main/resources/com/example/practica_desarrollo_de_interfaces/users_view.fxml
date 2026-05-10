@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+
+<VBox spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.practica_desarrollo_de_interfaces.controller.UsersController">
+
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <children>
+        <Label text="Gestión de Usuarios">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+
+        <HBox spacing="30.0" VBox.vgrow="ALWAYS">
+            <children>
+
+                <TableView fx:id="usersTable" HBox.hgrow="ALWAYS">
+                    <columns>
+                        <TableColumn fx:id="nameColumn" prefWidth="120.0" text="username" />
+                        <TableColumn fx:id="emailColumn" prefWidth="180.0" text="email" />
+                        <TableColumn fx:id="passwordColumn" prefWidth="150.0" text="password" />
+                        <TableColumn fx:id="favColumn" prefWidth="60.0" text="fav" />
+                    </columns>
+                </TableView>
+
+                <VBox spacing="15.0" minWidth="200.0" alignment="TOP_CENTER">
+                    <children>
+                        <HBox spacing="10.0" alignment="CENTER">
+                            <children>
+                                <Button onAction="#addUser" prefWidth="90.0" text="CREAR" />
+                                <Button onAction="#handleModify" prefWidth="90.0" text="MODIFICAR" />
+                            </children>
+                        </HBox>
+
+                        <Button onAction="#deleteUser" prefWidth="190.0" text="ELIMINAR" />
+
+                        <Button onAction="#handleChangeRole" prefWidth="190.0" prefHeight="40.0" text="CAMBIAR ROL"
+                                style="-fx-font-weight: bold;" />
+
+                        <Separator />
+
+                        <VBox spacing="5.0" alignment="CENTER_LEFT">
+                            <children>
+                                <Label text="buscar:" />
+                                <TextField fx:id="searchEmailField" promptText="Filtrar por email..." />
+                            </children>
+                        </VBox>
+                    </children>
+                </VBox>
+
+            </children>
+        </HBox>
+    </children>
+</VBox>

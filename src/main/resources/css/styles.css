@@ -1,0 +1,62 @@
+.card-view {
+    -fx-background-color: white;
+    -fx-border-color: #ddd;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+}
+
+.card-view:hover {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 10, 0, 0, 4);
+    -fx-translate-y: -3;
+}
+
+.card-title {
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-text-fill: #2c3e50;
+}
+
+.card-subtitle, .card-date {
+    -fx-font-size: 13px;
+    -fx-text-fill: #7f8c8d;
+}
+
+.card-favorito-usuario {
+    -fx-border-color: #3498db !important;
+    -fx-border-width: 3 !important;
+}
+
+.card-favorito-comunidad {
+    -fx-background-color: #fff9e6 !important;
+    -fx-border-color: #f1c40f !important;
+}
+
+.community-fav-label {
+    -fx-text-fill: #f39c12;
+    -fx-font-weight: bold;
+    -fx-font-size: 11px;
+    -fx-padding: 5 0 0 0;
+}
+
+.btn-fav {
+    -fx-text-fill: #e74c3c !important;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.btn-fav:hover {
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+
+.btn-edit {
+    -fx-background-color: #f39c12;
+    -fx-text-fill: white;
+    -fx-background-radius: 15;
+}
+
+.btn-delete {
+    -fx-background-color: #e74c3c;
+    -fx-text-fill: white;
+    -fx-background-radius: 15;
+}

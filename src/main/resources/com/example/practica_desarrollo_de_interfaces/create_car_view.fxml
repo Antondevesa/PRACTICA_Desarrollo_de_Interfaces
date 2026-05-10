@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+
+<VBox spacing="20.0" alignment="TOP_LEFT" style="-fx-background-color: white;"
+      xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.practica_desarrollo_de_interfaces.controller.CreateCarController">
+
+    <padding>
+        <Insets bottom="30.0" left="40.0" right="40.0" top="30.0" />
+    </padding>
+
+    <children>
+        <Label text="Registrar Nuevo Vehículo">
+            <font>
+                <Font name="System Bold" size="22.0" />
+            </font>
+        </Label>
+
+        <Separator />
+
+        <GridPane hgap="15.0" vgap="20.0">
+            <columnConstraints>
+                <ColumnConstraints minWidth="120.0" prefWidth="150.0" />
+                <ColumnConstraints hgrow="ALWAYS" minWidth="200.0" />
+            </columnConstraints>
+
+            <children>
+                <Label text="Modelo del Coche:" GridPane.rowIndex="0">
+                    <font> <Font name="System Bold" size="13.0" /> </font>
+                </Label>
+                <TextField fx:id="modelField" promptText="Ej: Tesla Model 3"
+                           style="-fx-padding: 8;" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                <Label text="Tipo de Vehículo:" GridPane.rowIndex="1">
+                    <font> <Font name="System Bold" size="13.0" /> </font>
+                </Label>
+                <ComboBox fx:id="typeCombo" maxWidth="Infinity" promptText="Seleccionar..."
+                          style="-fx-padding: 5;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                <Label text="Potencia (CV):" GridPane.rowIndex="2">
+                    <font> <Font name="System Bold" size="13.0" /> </font>
+                </Label>
+                <TextField fx:id="powerField" promptText="Ej: 325"
+                           style="-fx-padding: 8;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                <Label text="Fecha Matriculación:" GridPane.rowIndex="3">
+                    <font> <Font name="System Bold" size="13.0" /> </font>
+                </Label>
+                <DatePicker fx:id="datePicker" maxWidth="Infinity"
+                            style="-fx-padding: 5;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            </children>
+        </GridPane>
+
+        <Separator />
+
+        <HBox alignment="CENTER_RIGHT" spacing="15.0">
+            <children>
+                <Button onAction="#goBack" prefWidth="100.0" text="Cancelar"
+                        style="-fx-background-color: #95a5a6; -fx-text-fill: white; -fx-cursor: hand;" />
+
+                <Button onAction="#handleSave" prefWidth="150.0" text="Guardar Vehículo"
+                        style="-fx-background-color: #2ecc71; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand;" />
+            </children>
+        </HBox>
+
+        <Label fx:id="statusLabel" textFill="#e74c3c">
+            <font>
+                <Font name="System Italic" size="13.0" />
+            </font>
+        </Label>
+    </children>
+</VBox>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<ScrollPane fitToWidth="true" style="-fx-background-color: transparent;"
+            xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.practica_desarrollo_de_interfaces.controller.CarsController">
+    <content>
+        <VBox spacing="20.0">
+            <children>
+                <HBox alignment="CENTER_LEFT" spacing="20.0">
+                    <children>
+                        <Label style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Catálogo de Vehículos" />
+
+                        <Region HBox.hgrow="ALWAYS" />
+
+                        <Button fx:id="btnAddCar" onAction="#goToCreateCar" text="+ Añadir Coche"
+                                style="-fx-background-color: #2ecc71; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 10 20; -fx-background-radius: 5; -fx-cursor: hand;"
+                                visible="false" managed="false" />
+                    </children>
+                </HBox>
+
+                <TextField fx:id="searchField" maxWidth="400.0"
+                           promptText="🔍 Buscar por tipo (ej. Deportivo, Berlina...)"
+                           style="-fx-font-size: 14px; -fx-padding: 10px; -fx-background-radius: 20px; -fx-border-radius: 20px; -fx-border-color: #bdc3c7;" />
+
+                <Separator />
+
+                <FlowPane fx:id="carsFlowPane" hgap="20.0" prefWrapLength="800.0" vgap="20.0" />
+            </children>
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
+        </VBox>
+    </content>
+</ScrollPane>
